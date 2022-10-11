@@ -1,0 +1,28 @@
+$main: #181a21;
+$yellow: #f7bc00;
+$second: #1d232a;
+$bg-dark: #0a0e11;
+
+.footer {
+  background: $main;
+  font-size: 0.8rem;
+}
+
+.bi {
+  font-size: 1.2rem;
+}
+
+a:hover {
+  color: $yellow;
+}
+
+@media screen and (max-width: 768px) {
+  .dnone {
+    display: none;
+  }
+
+  .icon-ul,
+  .copyright {
+    margin: 0 auto !important;
+  }
+}

@@ -1,0 +1,122 @@
+$main: #181a21;
+$yellow: #f7bc00;
+$second: #1d232a;
+$bg-dark: #0a0e11;
+$f-color: #838e9e;
+
+.market {
+  background-color: $second;
+
+  .container-fluid {
+    nav {
+      .breadcrumb {
+        .breadcrumb-item {
+          align-self: center;
+          height: 100% !important;
+
+          a {
+            color: #515864 !important;
+            font-size: 1rem;
+            font-weight: 700;
+
+            &:hover {
+              color: $yellow  !important
+            }
+          }
+        }
+
+        .breadcrumb-item.active {
+          align-self: center;
+          color: $f-color  !important;
+          font-size: 1rem;
+          font-weight: 900 !important;
+
+        }
+      }
+    }
+
+    .top-nav {
+      .category {
+        .btn {
+          padding: 0.5rem 0.75rem;
+          font-size: 0.7rem;
+          font-weight: 900;
+          color: $f-color;
+          border-radius: 0.2rem;
+
+          &:hover {
+            background-color: $bg-dark;
+          }
+        }
+
+        .router-link-active {
+          color: $yellow;
+          background-color: #3C2601;
+        }
+      }
+
+      .search {
+
+        align-self: center;
+        font-size: 0.7rem;
+        border: 0.5px solid #515864;
+        border-radius: 0.2rem;
+
+        .bi-search {
+          margin: 0.5rem;
+          color: $f-color  !important;
+        }
+
+        input[type=search] {
+          width: 10rem;
+          border: 0;
+          color: $f-color;
+          background-color: $second;
+
+          &::placeholder {
+            color: #838e9e;
+          }
+
+          &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .market {
+    .container-fluid {
+      padding: 0 !important;
+
+      nav {
+        padding: 1rem 0 0 1rem !important;
+
+        .breadcrumb {
+          margin: 0 !important;
+        }
+      }
+
+      .top-nav {
+        padding: 1rem !important;
+        flex-direction: column-reverse;
+        justify-content: start !important;
+        align-items: flex-start !important;
+
+        .category {
+          margin-top: 1rem;
+        }
+
+        .search {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}

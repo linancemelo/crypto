@@ -1,0 +1,247 @@
+$main: #181a21;
+$yellow: #f7bc00;
+$second: #1d232a;
+$bg-dark: #0a0e11;
+$f-color: #838e9e;
+
+
+.wallet {
+  background-color: $bg-dark;
+
+  .balance {
+    padding: 4rem 10rem;
+
+    .info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .img {
+        width: 3rem;
+      }
+
+      .name {
+        margin-left: 1rem;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+    }
+
+    h4 {
+      margin-top: 2rem;
+      color: #fff;
+      font-size: 0.9rem;
+
+      .bi {
+        padding: 0 0.3rem;
+        margin-right: 0.5rem;
+        border-radius: 5px;
+        background-color: $main;
+      }
+    }
+
+    .money {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .money-value {
+        color: #eaecf0;
+        font-size: 1.5rem;
+        font-weight: 900;
+      }
+
+      .option {
+        .btn {
+          background-color: #ffda00;
+          margin: 0 0.5rem;
+          padding: 0.2rem 2rem;
+          border-radius: 0.2rem;
+          font-size: 0.7rem;
+          font-weight: 500;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.stock-container {
+  background-color: $bg-dark;
+
+  .stock {
+    padding: 4rem 10rem;
+    background-color: $second;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+
+    h4 {
+      color: #fff;
+    }
+
+    ul {
+      margin-top: 2rem;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -1rem 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: $bg-dark;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        .left {
+          display: flex;
+          align-items: center;
+
+          .logo {
+            img {
+              width: 1.6rem;
+            }
+          }
+
+          .title {
+            display: flex;
+            align-items: center;
+
+            .main {
+              align-self: center;
+              margin: 0 0.5rem;
+              font-weight: 500;
+            }
+
+            .sec {
+              color: $f-color;
+              font-size: 0.7rem;
+            }
+          }
+        }
+
+        .right {
+          display: flex;
+          align-items: center;
+
+          .main {
+            margin: 0 1rem;
+            font-weight: 500;
+          }
+
+          .sec {
+            color: $f-color;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wallet {
+    background-color: $bg-dark;
+
+    .balance {
+      padding: 3rem 1rem;
+
+      .info {
+        justify-content: center;
+
+        .img {
+          width: 4rem;
+        }
+
+        .name {
+          font-size: 2rem;
+        }
+      }
+
+      h4 {
+        text-align: center;
+      }
+
+      .money {
+        flex-direction: column;
+
+        .money-value {
+          margin-bottom: 1rem;
+
+          span {
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .stock-container {
+    .stock {
+      padding: 3rem 2rem;
+
+      h4 {
+        text-align: center;
+      }
+
+      ul {
+        margin-top: 2rem;
+
+        li {
+          margin: 0 -1rem 1rem;
+          padding: 1rem 1.5rem;
+
+          .left {
+            align-items: center;
+
+            .title {
+              flex-direction: column;
+              align-items: flex-start;
+              margin-left: 1rem;
+
+              .main {
+                margin: 0;
+                align-self: flex-start;
+              }
+            }
+          }
+
+          .right {
+            flex-direction: column;
+            align-items: flex-end;
+
+            .main {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wallet {
+    .balance {
+      .money {
+        .option {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          .btn {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

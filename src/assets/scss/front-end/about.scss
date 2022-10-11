@@ -1,0 +1,187 @@
+$main: #181a21;
+$yellow: #f7bc00;
+$second: #1d232a;
+$bg-dark: #0a0e11;
+$f-color: #838e9e;
+
+// welcome
+.welcome {
+  background: url("https://i.imgflip.com/48sq6r.png") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .content {
+    span {
+      font-size: 4rem;
+      font-weight: 900;
+      color: $yellow
+    }
+  }
+}
+
+// about
+.about {
+  background-color: $bg-dark;
+  padding: 4rem 5rem;
+
+  .top,
+  .bottom {
+    margin-bottom: 8rem;
+
+    .area {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .image {
+        width: 50%;
+      }
+
+      .content {
+        width: 50%;
+        align-self: center;
+
+        p {
+          padding: 0 5rem 0 0;
+          color: $f-color;
+          font-weight: 500;
+        }
+
+        .btn {
+          padding: 0.5rem 2.5rem;
+          background-color: $yellow;
+          border-radius: 3px;
+          font-size: 0.8rem;
+          color: #000;
+          font-weight: 500;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  .middle {
+    margin-bottom: 8rem;
+
+    .area {
+      display: flex;
+
+      .image {
+        width: 25%;
+
+        .img-fluid {
+          // position: relative;
+          padding-top: 20%;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+      }
+
+      .content {
+        width: 70%;
+        align-self: center;
+
+        p {
+          padding: 0 5rem;
+          color: $f-color;
+          font-weight: 500;
+        }
+
+        .btn {
+          margin-left: 5rem;
+          padding: 0.5rem 2.5rem;
+          background-color: $yellow;
+          border-radius: 3px;
+          font-size: 0.8rem;
+          color: #000;
+          font-weight: 500;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about {
+
+    .top,
+    .bottom {
+      .area {
+        .content {
+          p {
+            padding: 0 4rem 0 0 !important;
+          }
+
+          .btn {
+            margin-right: 4rem !important;
+          }
+        }
+      }
+    }
+
+    .middle {
+      .area {
+        .content {
+          p {
+            padding: 0 0 0 4rem !important;
+          }
+
+          .btn {
+            margin-left: 4rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .welcome {
+    flex-direction: column;
+
+    .content {
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+
+  .about {
+    padding: 4rem 2rem;
+
+    .top,
+    .bottom,
+    .middle {
+      .area {
+        flex-direction: column;
+        align-items: center;
+
+        .image {
+          width: 40% !important;
+        }
+
+        .content {
+          width: 100% !important;
+          margin-top: 2rem;
+
+          p {
+            padding: 0 !important;
+          }
+
+          .btn {
+            width: 100%;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,209 @@
+$main: #181a21;
+$yellow: #f7bc00;
+$second: #1d232a;
+$bg-dark: #0a0e11;
+$f-color: #838e9e;
+$up: #0ecb81;
+$down: #f6465d;
+
+.cryptoinfo {
+  background-color: $bg-dark;
+  padding: 2rem 6rem 6rem;
+
+  nav {
+    .breadcrumb {
+      .breadcrumb-item {
+        align-self: center;
+        height: 100% !important;
+
+        a {
+          color: #515864 !important;
+          font-size: 1rem;
+          font-weight: 700;
+
+          &:hover {
+            color: $yellow  !important;
+          }
+        }
+      }
+
+      .breadcrumb-item.active {
+        align-self: center;
+        color: $f-color  !important;
+        font-size: 1rem;
+        font-weight: 900 !important;
+
+      }
+    }
+  }
+
+  .main {
+    .chart {
+      .title {
+        img {
+          width: 2.4rem;
+          height: 2.4rem;
+          vertical-align: top;
+        }
+
+        h2 {
+          margin-left: 1rem;
+          margin-bottom: 0;
+          font-weight: 900;
+          align-self: center;
+
+          span {
+            margin-left: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: $f-color  !important;
+          }
+        }
+      }
+
+      .price {
+        margin-top: 0.5rem;
+
+        span {
+          &:first-child {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 800;
+          }
+
+          &:nth-child(2) {
+            margin: 0 0.5rem;
+          }
+
+          &:last-child {
+            color: $f-color;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    .cal {
+      padding: 3rem 0;
+
+      .title {
+        h4 {
+          font-weight: 800;
+          color: $f-color;
+          font-size: 1.3rem;
+        }
+
+        .calculator {
+          padding: 1rem;
+          margin-top: 1rem;
+          background-color: #2a313a;
+          border-radius: 0.5rem;
+
+          .count {
+            display: flex;
+            justify-content: space-between;
+
+            input[type=number] {
+              width: 50%;
+              outline: none !important;
+              border: 0;
+              background: inherit;
+              color: #fff;
+              font-weight: 700;
+
+              &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+              }
+            }
+
+            span {
+              padding: 0.5rem 1rem;
+              border-radius: 1.5rem;
+              color: #fff;
+              font-size: 0.8rem;
+              font-weight: 700;
+              background-color: $bg-dark;
+
+              img {
+                width: 1.2rem;
+                height: 1.2rem;
+              }
+            }
+          }
+        }
+
+        .sum {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 1rem;
+          color: $f-color;
+          font-weight: 900;
+        }
+      }
+
+      .btn {
+        width: 100%;
+        margin-top: 1rem;
+        background-color: $yellow;
+        font-size: 0.8rem;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .introduction {
+    margin-top: 5rem;
+
+    .about {
+      p {
+        padding-top: 1rem;
+        padding-right: 2.5rem;
+      }
+    }
+
+    .market {
+      .stats {
+        padding-top: 1rem;
+
+        div {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cryptoinfo {
+    padding: 1rem 0.5rem;
+
+    .container-fluid {
+      padding: 0;
+
+      .main {
+        .chart {
+          .price {
+            padding-left: 0.5rem;
+          }
+        }
+
+        .cal {
+          padding: 1rem;
+        }
+      }
+
+      .introduction {
+        flex-direction: column-reverse;
+
+        .about {
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    #trade {
+      width: 100% !important;
+
+    }
+  }
+}

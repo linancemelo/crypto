@@ -1,0 +1,34 @@
+$main: #181a21;
+$yellow: #f7bc00;
+$second: #1d232a;
+$bg-dark: #0a0e11;
+$f-color: #838e9e;
+$up: #0ecb81;
+$down: #f6465d;
+
+.page-item {
+  .page-link {
+    padding: 0.2rem 0.5rem !important;
+    color: $f-color;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0.2rem !important;
+    font-size: 0.8rem !important;
+
+    &:hover {
+      color: $bg-dark;
+      background-color: #a0aab7;
+    }
+  }
+}
+
+.page-link.active {
+  color: $bg-dark  !important;
+  background-color: #a0aab7 !important;
+}
+
+@media screen and (max-width: 600px) {
+  .pagination {
+    justify-content: center !important;
+  }
+}

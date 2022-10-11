@@ -1,0 +1,289 @@
+$main: #181a21;
+$yellow: #f7bc00;
+$second: #1d232a;
+$bg-dark: #0a0e11;
+$f-color: #838e9e;
+
+.container-fluid {
+  background-color: $bg-dark;
+  padding: 0;
+
+  .intro {
+    padding: 4.5rem;
+    background-color: $main;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    .hot {
+      margin-bottom: 6rem;
+
+      .crypto-list {
+        .table {
+          .thead {
+            color: $f-color  !important;
+            font-size: 0.8rem;
+
+            th {
+              padding: 0.5rem 0;
+
+            }
+          }
+
+          .tbody {
+            font-size: 0.8rem;
+
+            tr {
+              font-size: 0.8rem;
+              font-weight: 800;
+
+              &:hover {
+                background-color: $bg-dark;
+              }
+
+              td {
+                padding: 1rem 0;
+                align-self: center !important;
+              }
+
+              .title {
+                div {
+                  align-self: center !important;
+
+                  .logo {
+                    width: 1.2rem !important;
+                    height: 1.2rem !important;
+                    transform: translateY(-1px);
+                  }
+                }
+
+                :nth-child(3) {
+                  font-size: 0.7rem !important;
+                  color: $f-color
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .portfolio {
+      margin-bottom: 11rem;
+      position: relative;
+
+      .btn {
+        position: absolute;
+        left: 0;
+        bottom: -4rem;
+      }
+
+      ul {
+        li {
+          .i-con {
+            width: 5rem;
+            height: 5rem;
+            line-height: 3.5rem;
+            align-self: center;
+          }
+
+          p {
+            color: $f-color;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    .explore {
+      margin-bottom: 6rem;
+
+      .explore-card {
+        .card {
+          background-color: $bg-dark;
+
+          .card-body {
+            .card-text {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .download {
+      margin-bottom: 6rem;
+
+      .download-area {
+        .QR-code {
+          background-color: $bg-dark;
+          border-radius: 0.5rem;
+
+          img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 0.5rem;
+          }
+        }
+
+        .download-option {
+          ul {
+            li {
+              a {
+                &:hover {
+                  background-color: $f-color;
+                  border-radius: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .help {
+      margin-bottom: 3rem;
+
+      .help-option {
+        ul {
+          li {
+            margin-right: 2rem;
+
+            .image {
+              width: 3.5rem;
+              height: 3.5rem;
+              line-height: 3.5rem;
+              text-align: center;
+              margin-right: 2rem;
+            }
+
+            p {
+              margin: 0;
+              color: #838e9e;
+              font-size: 0.8rem;
+            }
+
+            a {
+              color: $yellow;
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .intro-end {
+    background: url("https://res.cloudinary.com/highereducation/images/w_2560,h_1707/f_auto,q_auto/w_800,h_320,c_fill,f_auto,q_auto:best,g_faces/v1659643669/BestColleges.com/Academic-Programs-in-Cryptocurrency-and-Blockchain_16637f380f/Academic-Programs-in-Cryptocurrency-and-Blockchain_16637f380f.jpg?_i=AA") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5rem;
+  }
+}
+
+.more {
+  font-size: 0.8rem;
+  color: #838e9e;
+  align-self: center;
+
+  &:hover {
+    color: $yellow;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container-fluid {
+    .intro {
+      padding: 1.5rem;
+
+      .portfolio {
+        .btn {
+          bottom: -5rem;
+        }
+
+        .row {
+          .i-con {
+            padding-top: 0.5rem;
+          }
+
+          .image {
+            display: none;
+          }
+        }
+      }
+
+      .explore {
+        margin-top: 11rem;
+
+        .explore-card {
+          .card {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .card-img-top,
+            .card-img-bottom {
+              padding: 1rem !important;
+              width: 8rem;
+              height: 8rem;
+            }
+
+            .card-body {
+              align-self: center;
+            }
+          }
+        }
+      }
+
+      .download {
+        .download-area {
+          .download-option {
+            ul {
+              padding: 0 !important;
+
+              li {
+                padding: 0 !important;
+              }
+            }
+          }
+        }
+      }
+
+      .help {
+        .help-option {
+          ul {
+            flex-direction: column;
+
+            li {
+              margin: 10rem 0;
+
+              .image {
+                margin-right: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-fluid {
+    .intro {
+      .hot {
+        .crypto-list {
+          .table {
+
+            .last-price,
+            .change {
+              text-align: end !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dnone {
+    display: none !important;
+  }
+}

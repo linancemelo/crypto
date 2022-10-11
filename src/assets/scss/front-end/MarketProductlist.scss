@@ -1,0 +1,83 @@
+$main: #181a21;
+$yellow: #f7bc00;
+$second: #1d232a;
+$bg-dark: #0a0e11;
+$f-color: #838e9e;
+$up: #0ecb81;
+$down: #f6465d;
+
+.product-list {
+  .table {
+    margin-bottom: 0;
+
+    .thead {
+      background-color: $bg-dark;
+
+      tr {
+        border: 0 !important;
+        font-size: 0.6rem
+      }
+    }
+
+    .tbody {
+      tr {
+        border-bottom: 1px solid $f-color  !important;
+        font-size: 0.8rem;
+        font-weight: 800;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $bg-dark;
+        }
+
+        td {
+          align-self: center;
+        }
+
+        .title {
+          div {
+            align-self: center;
+
+            .logo {
+              width: 1.6rem;
+              height: 1.6rem;
+            }
+          }
+
+          :nth-child(3) {
+            font-size: 0.7rem !important;
+            color: $f-color
+          }
+
+          .btn {
+            color: $yellow  !important;
+          }
+        }
+
+        .up {
+          color: $up;
+        }
+
+        .down {
+          color: $down;
+        }
+
+        .detail {
+          padding: 0;
+
+          a {
+            font-size: 0.7rem;
+            color: $yellow
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .dnone {
+    display: none !important;
+  }
+}

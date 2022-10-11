@@ -1,0 +1,90 @@
+$main: #181a21;
+$yellow: #f7bc00;
+$second: #1d232a;
+$bg-dark: #0a0e11;
+
+.home {
+  background-color: #0a0e11;
+
+  .main-pic {
+    .form {
+      h1 {
+        padding-right: 10rem;
+        margin-bottom: 2rem;
+      }
+
+      form {
+        .form-control {
+          background-color: $main;
+
+          &:focus {
+            background-color: $second  !important;
+            border-color: $yellow;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(255, 100, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  .main-char {
+    margin: 0 3rem;
+
+    .col-6 {
+      h4 {
+        font-size: 2rem;
+      }
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .intro {
+    background-color: $main;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .home {
+    .main-pic {
+      .form {
+        h1 {
+          padding-right: 0;
+        }
+
+        form {
+          flex-direction: column;
+
+          input {
+            width: 100% !important;
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    .main-char {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    .main-char {
+      .col-6 {
+        h4 {
+          font-size: 1.5rem;
+        }
+
+        span {
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
